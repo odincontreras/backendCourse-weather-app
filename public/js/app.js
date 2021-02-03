@@ -12,7 +12,7 @@ weatherForm.addEventListener("submit", (e) => {
 	forecastHtml.textContent = '';
   search.value = "";
 
-	fetch(`http://localhost:3000/weather?adress=${location}`).then((res) => {
+	fetch(`/weather?adress=${location}`).then((res) => {
 		res.json().then((data) => {
 			if (data.error) {
         locationHtml.textContent = data.error
